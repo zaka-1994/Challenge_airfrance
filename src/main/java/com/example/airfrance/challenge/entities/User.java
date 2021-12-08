@@ -42,8 +42,8 @@ public class User {
 	private String userName;
 	
 	@NotNull(message = "{validation.message.birthDay.mandatory}")
-    @Past(message = "{validation.message.birthDay.past}")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+        @Past(message = "{validation.message.birthDay.past}")
+        @DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name="dateOfBirth")
 	private LocalDate dateOfBirth;
 	
@@ -51,7 +51,7 @@ public class User {
 	@Column(name="country")
 	private String country;
 	
-	@Pattern(regexp="(^$|[0-9]{10})")
+	@Pattern(regexp="(^$|[0-9]{10})", message = "{validation.message.phone.valid}")
 	@Column(name="phoneNumber")
 	private String phoneNumber;
 	
